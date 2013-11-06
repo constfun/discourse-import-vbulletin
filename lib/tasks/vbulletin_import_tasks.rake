@@ -1,6 +1,6 @@
 namespace :vbulletin do
   desc 'Say hello.'
   task :hello do
-    puts "Hello Taks!"
+    puts "Hello Task!"
   end
 end
