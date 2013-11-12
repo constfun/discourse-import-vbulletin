@@ -6,10 +6,11 @@ module Vb
   # http://api.rubyonrails.org/classes/ActiveRecord/Base.html
   class Base < ActiveRecord::Base
     self.abstract_class = true
+
+    # We can also override table_name method if this doesn't work for all tables.
+    self.pluralize_table_names = false
+    self.primary_key_prefix_type = :table_name
   end
 
-  class User < Base
-    self.table_name = 'user'
-    self.primary_key = 'userid'
-  end
+  class User < Base; end
 end
