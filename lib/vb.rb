@@ -7,7 +7,7 @@ module Vb
   class Base < ActiveRecord::Base
     self.abstract_class = true
 
-    # We can also override table_name method if this doesn't work for all tables.
+    # We can also override table_name and primary_key methods if this doesn't work for all tables.
     self.pluralize_table_names = false
     self.primary_key_prefix_type = :table_name
   end
