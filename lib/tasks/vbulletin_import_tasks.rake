@@ -9,7 +9,6 @@ namespace :vbulletin do
 
   desc 'Do the import.'
   task :import => [:vb_environment, :environment] do
-    puts "First discourse user: #{User.first.name}"
-    puts "First vbulletin user: #{Vb::User.first.username}"
+    puts Vb::User.find(2022).membergroupids
   end
 end
