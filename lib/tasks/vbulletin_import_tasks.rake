@@ -1,5 +1,5 @@
-require 'vb'
 require 'rails'
+require 'vb/models'
 
 namespace :vbulletin do
   task :vb_environment => ['db:load_config'] do
